@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RestaurantFinderAndroidZoomato-rifqi-androidx.iml" filepath="$PROJECT_DIR$/.idea/RestaurantFinderAndroidZoomato-rifqi-androidx.iml" group="RestaurantFinderAndroidZoomato-rifqi-androidx" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="RestaurantFinderAndroidZoomato-rifqi-androidx/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ZomatoApiApp.iml" filepath="$PROJECT_DIR$/.idea/modules/ZomatoApiApp.iml" group="ZomatoApiApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="ZomatoApiApp/app" />
     </modules>
   </component>
 </project>

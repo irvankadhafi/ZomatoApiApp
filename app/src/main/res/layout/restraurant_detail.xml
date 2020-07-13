@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -293,10 +294,12 @@
                 android:layout_marginBottom="@dimen/size_5"
                 />
 
-            <androidx.recyclerview.widget.RecyclerView
+            <ListView
                 android:layout_width="match_parent"
+                android:layout_below="@+id/bogo_txt"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/bogo_txt"/>
+                android:id="@+id/listview"
+                tools:listitem="@layout/listreview_item"/>
 
 
         </RelativeLayout>
