@@ -27,19 +27,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Irvan Kadhafi"
+        android:textColor="@color/long_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
+        app:layout_constraintVertical_bias="0.181"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ilham Surya"
+        android:text="Muhammad Ilham Surya"
+        android:textColor="@color/long_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -53,12 +54,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nurallisha Rahmanda"
+        android:textColor="@color/long_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33"
+        app:layout_constraintVertical_bias="0.297"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
