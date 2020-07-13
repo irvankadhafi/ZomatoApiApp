@@ -11,42 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc4c4313-aa7b-4ffa-b0f0-aac935fcc051" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantPagedListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantPagedListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantsAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Categories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/GPSTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/GPSTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Restaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Restaurants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/UserRatings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/UserRatings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Utility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/DetailPageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/DetailPageFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/HomePageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/HomePageFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/viewmodelsfactory/RestaurantsDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/viewmodelsfactory/RestaurantsDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_a_photo_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_beenhere_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_restaurant_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_restaurant_black_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/restraurant_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/restraurant_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/restaurant_row_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/restaurant_row_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="8e52d6190603" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -231,14 +219,14 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="180" y="33" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1594543021896" />
-    <state x="362" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1594646112038">
+    <state x="362" y="223" key="com.intellij.ide.util.TipDialog" timestamp="1594652349646">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="362" y="223" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1594646112038" />
-    <state x="320" y="100" width="872" height="590" key="find.popup" timestamp="1594648815990">
+    <state x="362" y="223" key="com.intellij.ide.util.TipDialog/0.24.1366.744@0.24.1366.744" timestamp="1594652349646" />
+    <state x="320" y="100" width="872" height="590" key="find.popup" timestamp="1594653048521">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="320" y="100" width="872" height="590" key="find.popup/0.24.1366.744@0.24.1366.744" timestamp="1594648815990" />
+    <state x="320" y="100" width="872" height="590" key="find.popup/0.24.1366.744@0.24.1366.744" timestamp="1594653048521" />
     <state x="343" y="176" key="run.anything.popup" timestamp="1594635842914">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

@@ -4,13 +4,13 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 
-import com.uas.restaurantsearch.entity.Restaurants;
+import com.uas.restaurantsearch.models.Restaurants;
 import com.uas.restaurantsearch.networks.APIRepo;
 
 import java.util.List;
 
-import static com.uas.restaurantsearch.entity.Constant.ROW_COUNT;
-import static com.uas.restaurantsearch.entity.Constant.TYPE_CITY;
+import static com.uas.restaurantsearch.models.Constant.ROW_COUNT;
+import static com.uas.restaurantsearch.models.Constant.TYPE_CITY;
 
 public class RestaurantsViewModel extends ViewModel {
 

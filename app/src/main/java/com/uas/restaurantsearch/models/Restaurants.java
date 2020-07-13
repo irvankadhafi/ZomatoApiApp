@@ -1,9 +1,6 @@
-package com.uas.restaurantsearch.entity;
-
-import android.util.ArraySet;
+package com.uas.restaurantsearch.models;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Restaurants {

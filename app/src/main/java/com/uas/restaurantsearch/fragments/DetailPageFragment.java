@@ -24,20 +24,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.uas.restaurantsearch.HttpHandler;
-import com.uas.restaurantsearch.MainActivity;
 import com.uas.restaurantsearch.R;
-import com.uas.restaurantsearch.entity.Constant;
-import com.uas.restaurantsearch.entity.Restaurants;
-import com.uas.restaurantsearch.entity.Utility;
+import com.uas.restaurantsearch.models.Constant;
+import com.uas.restaurantsearch.models.Restaurants;
+import com.uas.restaurantsearch.models.Utility;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class DetailPageFragment extends BaseFragment {

@@ -4,8 +4,6 @@ import android.content.Context;
 
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,8 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.uas.restaurantsearch.R;
-import com.uas.restaurantsearch.entity.Categories;
-import com.uas.restaurantsearch.entity.Restaurants;
+import com.uas.restaurantsearch.models.Categories;
+import com.uas.restaurantsearch.models.Restaurants;
 
 import java.util.ArrayList;
 import java.util.HashMap;

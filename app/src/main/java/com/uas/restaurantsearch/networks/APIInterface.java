@@ -1,6 +1,6 @@
 package com.uas.restaurantsearch.networks;
 
-import com.uas.restaurantsearch.entity.Constant;
+import com.uas.restaurantsearch.models.Constant;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

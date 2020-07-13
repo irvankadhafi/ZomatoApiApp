@@ -3,7 +3,7 @@ package com.uas.restaurantsearch.networks;
 import androidx.annotation.NonNull;
 import android.util.Log;
 
-import com.uas.restaurantsearch.entity.Constant;
+import com.uas.restaurantsearch.models.Constant;
 
 import java.io.IOException;
 

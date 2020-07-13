@@ -3,7 +3,7 @@ package com.uas.restaurantsearch.viewmodelsfactory;
 import androidx.paging.DataSource;
 
 import com.uas.restaurantsearch.comp.ProgressBarInterface;
-import com.uas.restaurantsearch.entity.Categories;
+import com.uas.restaurantsearch.models.Categories;
 
 public class RestaurantsDataSourceFactory extends DataSource.Factory{
 

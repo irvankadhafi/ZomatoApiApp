@@ -1,6 +1,5 @@
 package com.uas.restaurantsearch.adapters;
 import androidx.paging.PagedListAdapter;
-import androidx.recyclerview.widget.RecyclerView.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,8 +17,8 @@ import android.widget.TextView;
 
 import com.uas.restaurantsearch.R;
 import com.uas.restaurantsearch.comp.PicassoTransformation;
-import com.uas.restaurantsearch.entity.Restaurants;
-import com.uas.restaurantsearch.entity.Utility;
+import com.uas.restaurantsearch.models.Restaurants;
+import com.uas.restaurantsearch.models.Utility;
 import com.squareup.picasso.Picasso;
 
 
@@ -58,6 +57,11 @@ public class RestaurantPagedListAdapter extends PagedListAdapter<Restaurants, Re
         drawable = DrawableCompat.wrap(drawable);
         DrawableCompat.setTint(drawable, Color.parseColor("#" + restaurant.getUser_rating().getRating_color()));
         holder.rating.setBackground(drawable);
+        if(restaurant.getIs_delivering_now().equals("1"))
+            holder.onlinedeliv.setVisibility(View.VISIBLE);
+        else
+            holder.onlinedeliv.setVisibility(View.GONE);
+
         if(Utility.isValidStr(restaurant.getAverage_cost_for_two())) {
             holder.avgCost.setText(context.getString(R.string.avg_cost_short, restaurant.getCurrency()+" "+restaurant.getAverage_cost_for_two()));
         }
@@ -72,7 +76,7 @@ public class RestaurantPagedListAdapter extends PagedListAdapter<Restaurants, Re
     public class RestaurantViewHolder extends RecyclerView.ViewHolder
     {
         ImageView imageView;
-        TextView name, cuisines, locality, rating, avgCost;
+        TextView name, cuisines, locality, rating, avgCost,onlinedeliv;
         View mView;
 
         public RestaurantViewHolder(View view)
@@ -84,6 +88,7 @@ public class RestaurantPagedListAdapter extends PagedListAdapter<Restaurants, Re
             locality = view.findViewById(R.id.locality);
             cuisines = view.findViewById(R.id.cuisines);
             rating = view.findViewById(R.id.ratings);
+            onlinedeliv = view.findViewById(R.id.onlinedeliv);
             mView = view;
         }
     }

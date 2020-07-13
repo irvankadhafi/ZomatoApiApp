@@ -1,4 +1,4 @@
-package com.uas.restaurantsearch.entity;
+package com.uas.restaurantsearch.models;
 
 /* AUTO-GENERATED FILE.  DO NOT MODIFY.
  *

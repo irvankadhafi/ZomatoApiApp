@@ -1,4 +1,4 @@
-package com.uas.restaurantsearch.entity;
+package com.uas.restaurantsearch.models;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

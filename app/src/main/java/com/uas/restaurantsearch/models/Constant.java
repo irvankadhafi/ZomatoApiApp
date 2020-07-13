@@ -1,4 +1,4 @@
-package com.uas.restaurantsearch.entity;
+package com.uas.restaurantsearch.models;
 
 public class Constant {
 

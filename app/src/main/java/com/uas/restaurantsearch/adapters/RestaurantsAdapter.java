@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.uas.restaurantsearch.R;
-import com.uas.restaurantsearch.entity.Restaurants;
-import com.uas.restaurantsearch.entity.Utility;
+import com.uas.restaurantsearch.models.Restaurants;
+import com.uas.restaurantsearch.models.Utility;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

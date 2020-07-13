@@ -3,7 +3,7 @@ package com.uas.restaurantsearch.viewmodels;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.uas.restaurantsearch.entity.Categories;
+import com.uas.restaurantsearch.models.Categories;
 import com.uas.restaurantsearch.networks.APIRepo;
 
 import java.util.List;

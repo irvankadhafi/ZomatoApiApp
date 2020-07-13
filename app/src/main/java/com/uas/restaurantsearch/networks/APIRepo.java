@@ -5,9 +5,9 @@ import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
 
 import com.uas.restaurantsearch.comp.CApp;
-import com.uas.restaurantsearch.entity.Categories;
-import com.uas.restaurantsearch.entity.Location;
-import com.uas.restaurantsearch.entity.Restaurants;
+import com.uas.restaurantsearch.models.Categories;
+import com.uas.restaurantsearch.models.Location;
+import com.uas.restaurantsearch.models.Restaurants;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -17,9 +17,9 @@ import com.uas.restaurantsearch.R;
 import com.uas.restaurantsearch.adapters.AdapterInterface;
 import com.uas.restaurantsearch.adapters.RestaurantPagedListAdapter;
 import com.uas.restaurantsearch.comp.ProgressBarInterface;
-import com.uas.restaurantsearch.entity.Categories;
-import com.uas.restaurantsearch.entity.Restaurants;
-import com.uas.restaurantsearch.entity.Utility;
+import com.uas.restaurantsearch.models.Categories;
+import com.uas.restaurantsearch.models.Restaurants;
+import com.uas.restaurantsearch.models.Utility;
 import com.uas.restaurantsearch.viewmodels.RestaurantsPagedViewModel;
 
 public class RestaurantListFragment extends BaseFragment {

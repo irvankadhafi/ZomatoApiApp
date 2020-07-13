@@ -6,9 +6,9 @@ import androidx.paging.PageKeyedDataSource;
 import android.util.Log;
 
 import com.uas.restaurantsearch.comp.ProgressBarInterface;
-import com.uas.restaurantsearch.entity.Categories;
-import com.uas.restaurantsearch.entity.Constant;
-import com.uas.restaurantsearch.entity.Restaurants;
+import com.uas.restaurantsearch.models.Categories;
+import com.uas.restaurantsearch.models.Constant;
+import com.uas.restaurantsearch.models.Restaurants;
 import com.uas.restaurantsearch.networks.APIRepo;
 
 import java.util.List;
