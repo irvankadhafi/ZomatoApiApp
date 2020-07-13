@@ -11,30 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc4c4313-aa7b-4ffa-b0f0-aac935fcc051" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantPagedListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantPagedListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/adapters/RestaurantsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Categories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/GPSTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/GPSTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Restaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Restaurants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/UserRatings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/UserRatings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/entity/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/models/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/DetailPageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/DetailPageFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/HomePageFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/fragments/HomePageFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/uas/restaurantsearch/networks/APIRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/restaurant_row_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/restaurant_row_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="8e52d6190603" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -195,10 +179,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="267" y="106" key="AndroidThemeDialog/0.24.1366.744@0.24.1366.744" timestamp="1594635085201" />
-    <state x="467" y="126" key="FileChooserDialogImpl" timestamp="1594647876878">
+    <state x="467" y="126" key="FileChooserDialogImpl" timestamp="1594653792413">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="467" y="126" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1594647876878" />
+    <state x="467" y="126" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1594653792413" />
     <state width="1320" height="176" key="GridCell.Tab.0.bottom" timestamp="1594643754620">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
