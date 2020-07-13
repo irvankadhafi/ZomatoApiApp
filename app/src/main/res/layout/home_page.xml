@@ -41,24 +41,12 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_10"
-        android:textColor="@color/black"
-        android:id="@+id/rec"
-        android:layout_marginTop="@dimen/text_5"
-        android:layout_marginStart="@dimen/size_3"
-        android:text="@string/recommendation"
-        android:layout_below="@+id/search_bar"
-        />
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_1"
         android:textSize="@dimen/text_10"
         android:textColor="@color/bg_light_gray"
         android:id="@+id/border"
-        android:layout_below="@id/rec"
+        android:layout_below="@id/search_bar"
         android:layout_marginTop="@dimen/size_2"
         android:background="@color/bg_light_gray"
         android:visibility="gone"

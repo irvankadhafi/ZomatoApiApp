@@ -2,6 +2,7 @@ package com.uas.restaurantsearch.fragments;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -20,6 +21,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -30,6 +32,7 @@ import com.android.volley.toolbox.Volley;
 import com.uas.restaurantsearch.HttpHandler;
 import com.uas.restaurantsearch.MainActivity;
 import com.uas.restaurantsearch.R;
+import com.uas.restaurantsearch.entity.Constant;
 import com.uas.restaurantsearch.entity.Restaurants;
 import com.uas.restaurantsearch.entity.Utility;
 import com.squareup.picasso.Picasso;
@@ -50,11 +53,12 @@ public class DetailPageFragment extends BaseFragment {
     private ProgressDialog progressDialog;
     private ListView listView;
     ArrayList<HashMap<String, String>> reviewJsonList;
-
+    Context context;
     private Restaurants.Restaurant restaurant;
     private ImageView imageView;
     private TextView nameText, ratingText, cuisinesText, localityText, addressText, avgCost, bogoOffers, userRatingText;
     private WebView webView;
+    private GetColors getColors;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -72,7 +76,8 @@ public class DetailPageFragment extends BaseFragment {
         webView = mView.findViewById(R.id.web_view);
         reviewJsonList = new ArrayList<>();
         listView = mView.findViewById(R.id.listview);
-        new GetColors().execute();
+        listView.setNestedScrollingEnabled(true);
+        getColors = new GetColors();
         return mView;
     }
 
@@ -83,7 +88,7 @@ public class DetailPageFragment extends BaseFragment {
         protected void onPreExecute() {
             super.onPreExecute();
             progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage("Please wait...");
+            progressDialog.setMessage("Fetch Reviews Data");
             progressDialog.setCancelable(false);
             progressDialog.show();
         }
@@ -93,8 +98,9 @@ public class DetailPageFragment extends BaseFragment {
             HttpHandler httpHandler = new HttpHandler();
 
             // JSON data url
-            String jsonurl = "https://api.zomato.com/v1/reviews.json/18389079/user?count=0&apikey=ed217d7f9628996e820e7aa509b09d3f";
-            String jsonString = httpHandler.makeServiceCall(jsonurl);
+            String reviewsapi = "https://api.zomato.com/v1/reviews.json/"+restaurant.getId()+"/user?count=0&apikey=b712469651b07553385c419160a7465e";
+            String jsonurl = "https://api.zomato.com/v1/reviews.json/18701282/user?count=0&apikey=ed217d7f9628996e820e7aa509b09d3f";
+            String jsonString = httpHandler.makeServiceCall(reviewsapi);
             Log.e(TAG, "Response from url: " + jsonString);
             if (jsonString != null) {
                 try {
@@ -104,11 +110,13 @@ public class DetailPageFragment extends BaseFragment {
 
                     for (int i = 0; i < colors.length(); i++) {
                         JSONObject c = colors.getJSONObject(i);
-
                         JSONObject review = c.getJSONObject("review");
+
+
                         String name = review.getString("userName");
                         String rating = review.getString("rating");
                         String reviewText = review.getString("reviewText");
+                        String ratingColor = review.getString("ratingColor");
 
 
                         HashMap<String, String> colorx = new HashMap<>();
@@ -116,13 +124,14 @@ public class DetailPageFragment extends BaseFragment {
                         colorx.put("name", name);
                         colorx.put("rating", rating);
                         colorx.put("review", reviewText);
+                        colorx.put("ratingcolor", ratingColor);
                         Log.d(TAG, "datanyaaaa: "+colorx);
+
 
                         reviewJsonList.add(colorx);
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
-
                 }
             } else {
                 Log.e(TAG, "Could not get json from server.");
@@ -139,10 +148,24 @@ public class DetailPageFragment extends BaseFragment {
             if (progressDialog.isShowing()) progressDialog.dismiss();
             ListAdapter adapter = new SimpleAdapter(
                     getActivity(), reviewJsonList, R.layout.listreview_item,
-                    new String[]{"review","rating","name"},
-                    new int[]{R.id.colorName,R.id.colorType,R.id.colorHex});
+                    new String[]{"name","rating","review"},
+                    new int[]{R.id.text_headline,R.id.text_subhead,R.id.text_review});
 
-            listView.setAdapter((android.widget.ListAdapter) adapter);
+            listView.setAdapter(adapter);
+
+            if (reviewJsonList.isEmpty()){
+                listView.setVisibility(View.GONE);
+                Toast toast = Toast.makeText(getActivity(),
+                        "Reviws not loaded",
+                        Toast.LENGTH_SHORT);
+                toast.show();
+            }else {
+                listView.setVisibility(View.VISIBLE);
+                Toast toast = Toast.makeText(getActivity(),
+                        "Reviws loaded",
+                        Toast.LENGTH_SHORT);
+                toast.show();
+            }
         }
 
     }
@@ -163,6 +186,7 @@ public class DetailPageFragment extends BaseFragment {
         webView.getSettings().setUseWideViewPort(true);
 //        webView.loadUrl("https://had3ae.team/ppb/osm.php?long="+String.valueOf(restaurant.getLocation().getlongitude())+"&lat="+String.valueOf(restaurant.getLocation().getlatitude()));
         webView.loadUrl(url);
+
     }
 
     @Override
@@ -170,12 +194,9 @@ public class DetailPageFragment extends BaseFragment {
     {
         super.onViewCreated(view, savedInstanceState);
         init();
-//        String[] arrayhighlight = restaurant.gethighlights();
-//        Log.d(TAG, "onViewCreated: "+ arrayhighlight[5]);
-//        Log.d(TAG, "onViewCreated: "+ arrayhighlight.length);
 
         ArrayList<String> list = new ArrayList<>(restaurant.getHighlights());
-        Log.d(TAG, "onViewCreated: "+restaurant.getHighlights());
+//        Log.d(TAG, "onViewCreated: "+restaurant.getHighlights());
         Log.d(TAG, "onViewCreated: "+ restaurant.getId());
 
         for (int counter = 0; counter < list.size(); counter++) {
@@ -189,7 +210,6 @@ public class DetailPageFragment extends BaseFragment {
             Picasso.get().load(restaurant.getFeatured_image()).placeholder(R.drawable.ic_restaurant_black_24dp).resize(width, height).into(imageView);
         }
 //        Log.d(TAG, "onCreateView: "+restaurant.getLocation().getlongitude());
-
         nameText.setText(restaurant.getName());
         ratingText.setText(restaurant.getUser_rating().getAggregate_rating());
         Drawable drawable = ratingText.getBackground();
@@ -200,7 +220,6 @@ public class DetailPageFragment extends BaseFragment {
         cuisinesText.setText(restaurant.getCuisines());
         localityText.setText(restaurant.getLocation().getLocality_verbose());
         addressText.setText(restaurant.getLocation().getAddress());
-
         userRatingText.setText(getString(R.string.user_experience, restaurant.getUser_rating().getRating_text()));
         avgCost.setText(getString(R.string.avg_cost, restaurant.getCurrency() + " " + restaurant.getAverage_cost_for_two()));
 
@@ -210,6 +229,8 @@ public class DetailPageFragment extends BaseFragment {
             bogoOffers.setVisibility(View.GONE);
         openBrowser();
         Log.d(TAG, "price range: "+restaurant.getPrice_range());
+        Log.d(TAG, "Apakah delivery sekarang: "+restaurant.getIs_delivering_now());
+        new GetColors().execute();
     }
 
     private void init()

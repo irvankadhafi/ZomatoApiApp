@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingStart="16dp"
-    android:paddingLeft="16dp">
-
-    <TextView
-        android:id="@+id/colorName"
-        style="@style/TextAppearance.AppCompat.Headline"
+    android:orientation="horizontal"
+    android:padding="16dp">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Color Name"
-        android:textColor="@color/colorPrimaryDark" ></TextView>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/colorType"
-        style="@style/TextAppearance.AppCompat.Subhead"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Type Color" ></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/colorHex"
-        style="@style/TextAppearance.AppCompat.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:hint="Hex Color" ></TextView>
+            <TextView
+                android:id="@+id/text_headline"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook" />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/text_subhead"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlue"
+                android:textSize="@dimen/text_10"
+                android:text="@string/one"
+                android:drawableStart="@drawable/ic_star_black_24dp"
+                android:background="@drawable/rating_border"
+                android:gravity="center"
+                android:padding="@dimen/size_2"
+                />
+
+            <TextView
+                android:id="@+id/text_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social Media App"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

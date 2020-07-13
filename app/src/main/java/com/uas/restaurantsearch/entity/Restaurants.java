@@ -26,6 +26,15 @@ public class Restaurants {
         private String price_range;
         private String average_cost_for_two;
         private String currency;
+        private String is_delivering_now;
+
+        public String getIs_delivering_now() {
+            return is_delivering_now;
+        }
+
+        public void setIs_delivering_now(String is_delivering_now) {
+            this.is_delivering_now = is_delivering_now;
+        }
 
         public ArrayList<String> getHighlights() {
             return highlights;

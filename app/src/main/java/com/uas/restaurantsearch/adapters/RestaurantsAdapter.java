@@ -51,6 +51,11 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         DrawableCompat.setTint(drawable, Color.parseColor("#" + restaurant.getUser_rating().getRating_color()));
         holder.ratings.setBackground(drawable);
 
+        if(restaurant.getIs_delivering_now().equals("1"))
+            holder.onlinedeliv.setVisibility(View.VISIBLE);
+        else
+            holder.onlinedeliv.setVisibility(View.GONE);
+
         holder.mView.setTag(restaurant);
         holder.mView.setOnClickListener(clickListener);
     }
@@ -65,7 +70,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         ImageView imageView;
         TextView textView;
         TextView address;
-        TextView cuisines, ratings;
+        TextView cuisines, ratings, onlinedeliv;
         View mView;
 
         public RestaurantHolder(View view)
@@ -76,6 +81,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
             address = view.findViewById(R.id.address);
             cuisines = view.findViewById(R.id.cuisines);
             ratings = view.findViewById(R.id.ratings);
+            onlinedeliv = view.findViewById(R.id.onlinedeliv);
             mView = view;
         }
     }

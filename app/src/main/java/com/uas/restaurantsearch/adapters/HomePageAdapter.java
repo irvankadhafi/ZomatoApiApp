@@ -29,8 +29,6 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ChildH
     private Context context;
     private HashMap<Long, List<Restaurants>> restaurantHashMap;
 
-    private static String ADAPTER_TYPES[] = {"TYPE_1", "TYPE_2", "TYPE_3", "TYPE_1", "TYPE_4"};
-
     private AdapterInterface mInterface;
 
     public HomePageAdapter(List<Categories.Category> categories, AdapterInterface clickInterface, HashMap<Long, List<Restaurants>> restaurantHashMap)
@@ -61,9 +59,9 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ChildH
         Categories.Category category = categories.get(i);
         Log.d("fatal", "category id" + category.getId());
         childHolder.list.setHasFixedSize(true);
-        childHolder.list.setLayoutManager(getLayoutManager(i));
+        childHolder.list.setLayoutManager(getLayoutManager());
         childHolder.header.setText(category.getName());
-        childHolder.adapter = getAdapter(i, category.getId());
+        childHolder.adapter = getAdapter(category.getId());
         childHolder.list.setAdapter(childHolder.adapter);
         childHolder.seeAll.setTag(category);
         childHolder.seeAll.setOnClickListener(clickListener);
@@ -90,50 +88,17 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ChildH
         }
     }
 
-    private RecyclerView.Adapter getAdapter(int i, long categoryId)
+    private RecyclerView.Adapter getAdapter(long categoryId)
     {
-        RecyclerView.Adapter adapter;
-        String type = ADAPTER_TYPES[i%ADAPTER_TYPES.length];
         if(restaurantHashMap.get(categoryId) == null)
             restaurantHashMap.put(categoryId, new ArrayList<Restaurants>());
-        switch (type)
-        {
-            case "TYPE_2":
-                    adapter = new RestaurantsAdapterTwo(restaurantHashMap.get(categoryId), mInterface);
-                break;
-            case "TYPE_3":
-                    adapter = new RestaurantAdapterGrid(restaurantHashMap.get(categoryId), mInterface, 0);
-                    break;
-            case "TYPE_4":
-                    adapter = new RestaurantAdapterGrid(restaurantHashMap.get(categoryId), mInterface, 1);
-                break;
-                default:
-                    adapter = new RestaurantsAdapter(restaurantHashMap.get(categoryId), mInterface);
-                break;
-        }
-        return adapter;
+
+        return new RestaurantsAdapter(restaurantHashMap.get(categoryId), mInterface);
     }
 
-    private LinearLayoutManager getLayoutManager(int i)
+    private LinearLayoutManager getLayoutManager()
     {
-        LinearLayoutManager linearLayoutManager;
-        String type = ADAPTER_TYPES[i%ADAPTER_TYPES.length];
-        switch (type)
-        {
-            case "TYPE_2":
-                linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
-                break;
-            case "TYPE_3":
-                linearLayoutManager = new GridLayoutManager(context, 3);
-                break;
-            case "TYPE_4":
-                linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
-                break;
-            default:
-                linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
-                break;
-        }
-        return linearLayoutManager;
+        return new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
     }
 
     View.OnClickListener clickListener = new View.OnClickListener() {

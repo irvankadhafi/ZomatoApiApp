@@ -31,15 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, getString(R.string.coming_soon), Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         if(savedInstanceState == null)
             switchFragments(FRAGMENT_HOME, null);
     }
@@ -54,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_about) {
+            startActivity(new Intent(this, AboutActivity.class));
         }
 
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     public void switchFragments(int code, Intent intent)

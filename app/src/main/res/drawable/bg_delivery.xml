@@ -6,6 +6,6 @@
         android:right="1dp"
         android:bottom="1dp"
         android:top="1dp" />
-<!--    <corners android:topLeftRadius="@dimen/size_2"/>-->
+    <!--    <corners android:topLeftRadius="@dimen/size_2"/>-->
     <corners android:radius="5dp" />
 </shape>
