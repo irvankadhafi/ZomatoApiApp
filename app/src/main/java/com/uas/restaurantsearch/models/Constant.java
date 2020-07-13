@@ -2,13 +2,12 @@ package com.uas.restaurantsearch.models;
 
 public class Constant {
 
-    public static final String API_KEY = "b712469651b07553385c419160a7465e ";
+    public static final String API_KEY = "960107d8976634184845e3ab8caa0854 ";
 
     public static final String BASE_URL = "https://developers.zomato.com/api/v2.1/";
     public static final String GET_CATEGORIES = "categories";
     public static final String SEARCH_RESTAURANTS = "search";
     public static final String SEARCH_LOCATIONS = "locations";
-    public static final String REVIEWS = "reviews";
     public static final int ROW_COUNT = 10;
     public static final String TYPE_CITY = "city";
 
