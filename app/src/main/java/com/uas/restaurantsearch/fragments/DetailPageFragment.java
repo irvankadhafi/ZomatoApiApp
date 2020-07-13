@@ -104,9 +104,6 @@ public class DetailPageFragment extends BaseFragment {
 
                     for (int i = 0; i < colors.length(); i++) {
                         JSONObject c = colors.getJSONObject(i);
-//                        String id = c.getString("id");
-//                        String color = c.getString("color");
-//                        String type = c.getString("type");
 
                         JSONObject review = c.getJSONObject("review");
                         String name = review.getString("userName");
@@ -119,7 +116,7 @@ public class DetailPageFragment extends BaseFragment {
                         colorx.put("name", name);
                         colorx.put("rating", rating);
                         colorx.put("review", reviewText);
-                        Log.d(TAG, "doInBackground: "+reviewText);
+                        Log.d(TAG, "datanyaaaa: "+colorx);
 
                         reviewJsonList.add(colorx);
                     }
