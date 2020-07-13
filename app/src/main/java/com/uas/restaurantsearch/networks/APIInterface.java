@@ -21,6 +21,4 @@ public interface APIInterface {
     @GET(Constant.SEARCH_LOCATIONS)
     Call<ServerResponses> searchLocations(@Query("query") String query);
 
-    @GET(Constant.REVIEWS)
-    Call<ServerResponses> getreviews(@Query("query") long resID);
 }

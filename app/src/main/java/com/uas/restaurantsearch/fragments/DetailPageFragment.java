@@ -23,12 +23,6 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.uas.restaurantsearch.HttpHandler;
 import com.uas.restaurantsearch.MainActivity;
 import com.uas.restaurantsearch.R;
@@ -98,7 +92,7 @@ public class DetailPageFragment extends BaseFragment {
             HttpHandler httpHandler = new HttpHandler();
 
             // JSON data url
-            String reviewsapi = "https://api.zomato.com/v1/reviews.json/"+restaurant.getId()+"/user?count=0&apikey=b712469651b07553385c419160a7465e";
+            String reviewsapi = "https://api.zomato.com/v1/reviews.json/"+restaurant.getId()+"/user?count=0&apikey="+Constant.API_KEY;
             String jsonurl = "https://api.zomato.com/v1/reviews.json/18701282/user?count=0&apikey=ed217d7f9628996e820e7aa509b09d3f";
             String jsonString = httpHandler.makeServiceCall(reviewsapi);
             Log.e(TAG, "Response from url: " + jsonString);
@@ -223,10 +217,11 @@ public class DetailPageFragment extends BaseFragment {
         userRatingText.setText(getString(R.string.user_experience, restaurant.getUser_rating().getRating_text()));
         avgCost.setText(getString(R.string.avg_cost, restaurant.getCurrency() + " " + restaurant.getAverage_cost_for_two()));
 
-        if(restaurant.isInclude_bogo_offers())
+        if(restaurant.getIs_delivering_now().equals("1"))
             bogoOffers.setVisibility(View.VISIBLE);
         else
             bogoOffers.setVisibility(View.GONE);
+
         openBrowser();
         Log.d(TAG, "price range: "+restaurant.getPrice_range());
         Log.d(TAG, "Apakah delivery sekarang: "+restaurant.getIs_delivering_now());

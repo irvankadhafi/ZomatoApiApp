@@ -22,12 +22,12 @@
 
     <string name="details">Details</string>
     <string name="reviews">Reviews List</string>
-    <string name="address">Address</string>
+    <string name="address">Alamat Restoran</string>
 
-    <string name="avg_cost_lbl">AVERAGE COST</string>
-    <string name="avg_cost">%1$s for two people(approx.) with alcohol</string>
+    <string name="avg_cost_lbl">Perkiraan harga</string>
+    <string name="avg_cost">%1$s Untuk 2 orang</string>
 
-    <string name="avg_cost_short"> Rp. %1$s for two people(approx.)</string>
+    <string name="avg_cost_short"> %1$s Untuk 2 orang</string>
 
     <string name="bogo_offers">BOGO Offers</string>
     <string name="online_order">Online Order</string>

@@ -65,32 +65,24 @@ public class HomePageFragment extends BaseFragment{
         restaurantHashMap = new HashMap<>();
 
         GPSTracker gpsTracker = new GPSTracker(getActivity());
-
         if (gpsTracker.getIsGPSTrackingEnabled())
         {
             String stringLatitude = String.valueOf(gpsTracker.getLatitude());
-
-
             String stringLongitude = String.valueOf(gpsTracker.getLongitude());
-            Log.d(TAG, "onCreate: Latitude "+stringLatitude);
-
             String country = gpsTracker.getCountryName(getActivity());
-
-
             String city = gpsTracker.getLocality(getActivity());
-
-
             String postalCode = gpsTracker.getPostalCode(getActivity());
-
-
             String addressLine = gpsTracker.getAddressLine(getActivity());
+
             currentCity = city;
+            Toast toast = Toast.makeText(getActivity(),
+                    "Lat:"+stringLatitude+" Long:"+stringLongitude+", Expected: "+currentCity+", "+country,
+                    Toast.LENGTH_SHORT);
+            toast.show();
         }
         else
         {
-            // can't get location
-            // GPS or Network is not enabled
-            // Ask user to enable GPS/network in settings
+
             gpsTracker.showSettingsAlert();
             currentCity = Constant.DEFAULT_CITY;
         }
@@ -202,6 +194,10 @@ public class HomePageFragment extends BaseFragment{
                     Log.d("fatal", "cityId : " + cityId);
                     showPrg(getString(R.string.pls_wait));
                     categoryViewModel.getCategoryFromAPI().observe(HomePageFragment.this, categoriesObservers);
+                    Toast toast = Toast.makeText(getActivity(),
+                            "Lat:"+location.getlatitude()+" Long:"+location.getlongitude()+", Suggested: "+location.getCity()+", "+location.getCountry_name(),
+                            Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
             else

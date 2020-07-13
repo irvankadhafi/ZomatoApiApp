@@ -1,6 +1,8 @@
 package com.uas.restaurantsearch.adapters;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -57,7 +59,7 @@ public class RestaurantPagedListAdapter extends PagedListAdapter<Restaurants, Re
         DrawableCompat.setTint(drawable, Color.parseColor("#" + restaurant.getUser_rating().getRating_color()));
         holder.rating.setBackground(drawable);
         if(Utility.isValidStr(restaurant.getAverage_cost_for_two())) {
-            holder.avgCost.setText(context.getString(R.string.avg_cost_short, restaurant.getAverage_cost_for_two()));
+            holder.avgCost.setText(context.getString(R.string.avg_cost_short, restaurant.getCurrency()+" "+restaurant.getAverage_cost_for_two()));
         }
         else
         {
@@ -94,6 +96,7 @@ public class RestaurantPagedListAdapter extends PagedListAdapter<Restaurants, Re
             return oldItem.getRestaurant().getId() == newItem.getRestaurant().getId();
         }
 
+        @SuppressLint("DiffUtilEquals")
         @Override
         public boolean areContentsTheSame(@NonNull Restaurants oldItem, @NonNull Restaurants newItem)
         {

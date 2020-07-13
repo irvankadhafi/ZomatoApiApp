@@ -43,7 +43,6 @@ public class RestaurantsDataSource  extends PageKeyedDataSource<Long, Restaurant
 
     @Override
     public void loadAfter(@NonNull LoadParams<Long> params, @NonNull LoadCallback<Long, Restaurants> callback) {
-
         long nextKey = (params.key == apiRepo.getTotalPages()) ? null : params.key + 1;
         Log.d("fatal", "nextKey:" + nextKey);
         long start = (Constant.LOAD_PAGE_SIZE * (nextKey - 1));

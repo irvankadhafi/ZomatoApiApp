@@ -15,8 +15,6 @@ public class Utility {
 
     public static boolean isValidStr(String s)
     {
-        if(s != null && s.length() > 0)
-            return true;
-        return false;
+        return s != null && s.length() > 0;
     }
 }
