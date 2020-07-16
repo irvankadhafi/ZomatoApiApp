@@ -15,6 +15,7 @@ import static com.uas.restaurantsearch.models.Constant.TYPE_CITY;
 public class RestaurantsViewModel extends ViewModel {
 
     private LiveData<List<Restaurants>> restaurantList;
+
     private APIRepo apiRepo;
 
     public RestaurantsViewModel() {

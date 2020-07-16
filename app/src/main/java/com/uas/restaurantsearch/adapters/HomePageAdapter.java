@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.uas.restaurantsearch.fragments.HomePageFragment.TAG;
+
 public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ChildHolder>{
 
     private List<Categories.Category> categories;
@@ -46,6 +48,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ChildH
     @NonNull
     @Override
     public ChildHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        Log.d(TAG, "onCreateViewHolder: "+i);
         context = viewGroup.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.parent_recycler, viewGroup,false);
         return new ChildHolder(view);
@@ -53,7 +56,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ChildH
 
     @Override
     public void onBindViewHolder(@NonNull final ChildHolder childHolder, int i) {
-
+        Log.d(TAG, "onBindViewHolder: "+i);
         Categories.Category category = categories.get(i);
         Log.d("fatal", "category id" + category.getId());
         childHolder.list.setHasFixedSize(true);
