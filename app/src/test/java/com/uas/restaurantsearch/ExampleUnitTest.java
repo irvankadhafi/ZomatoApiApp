@@ -1,18 +1,16 @@
 package com.uas.restaurantsearch;
 
-import androidx.lifecycle.LiveData;
-
+import com.uas.restaurantsearch.models.Categories;
 import com.uas.restaurantsearch.models.Location;
-import com.uas.restaurantsearch.networks.APIRepo;
+import com.uas.restaurantsearch.models.Restaurants;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mockito.runners.MockitoJUnitRunner;
-import static org.mockito.Mockito.when;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
-import java.util.List;
-
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 /**
@@ -20,24 +18,52 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
+
+@RunWith(JUnit4.class)
 public class ExampleUnitTest {
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-        // Code executed before the first test method
-    }
+
+    private Location mLocation;
+    private Restaurants.Restaurant mRestaurant;
 
     @Before
-    public void setUp() throws Exception {
-        // Code executed before each test
+    public void setUpLocation() {
+        mLocation = new Location();
     }
 
     @Test
-    public void testOneThing() {
-        // Code that tests one thing
+    public void addition_isCorrect() {
+        assertEquals(4, 2 + 2);
     }
 
     @Test
-    public void testAnotherThing() {
-        // Code that tests another thing
+    public void testSetCity (){
+        String city = "Bandung";
+        mLocation.setCity(city);
+        assertThat(mLocation.getCity(), is(equalTo(city)));
     }
+
+    @Test
+    public void testGetCity() {
+        String city = "Bandung";
+        mLocation.setCity(city);
+        assertThat(city, is(equalTo(mLocation.getCity())));
+    }
+
+    @Test
+    public void testSetNameRestaurant (){
+        mRestaurant = new Restaurants.Restaurant();
+        String name = "The Bistro";
+        mRestaurant.setName(name);
+        assertThat(mRestaurant.getName(), is(equalTo(name)));
+    }
+
+    @Test
+    public void testGetNameRestaurant (){
+        mRestaurant = new Restaurants.Restaurant();
+        String name = "The Bistro";
+        mRestaurant.setName(name);
+        assertThat(name, is(equalTo(mRestaurant.getName())));
+    }
+
+
 }
