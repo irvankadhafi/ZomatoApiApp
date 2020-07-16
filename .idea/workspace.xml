@@ -504,10 +504,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="267" y="106" key="AndroidThemeDialog/0.24.1366.744@0.24.1366.744" timestamp="1594635085201" />
-    <state x="117" y="24" key="CommitChangelistDialog2" timestamp="1594914448994">
+    <state x="117" y="24" key="CommitChangelistDialog2" timestamp="1594914467732">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="117" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1594914448994" />
+    <state x="117" y="24" key="CommitChangelistDialog2/0.24.1366.744@0.24.1366.744" timestamp="1594914467732" />
     <state x="467" y="126" key="FileChooserDialogImpl" timestamp="1594653792413">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
@@ -544,18 +544,22 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="1320" height="178" key="GridCell.Tab.1.right/0.24.1366.744@0.24.1366.744" timestamp="1594911193201" />
-    <state x="133" y="86" key="MergeDialog" timestamp="1594890251425">
+    <state x="133" y="86" width="1100" height="627" key="MergeDialog" timestamp="1594914581327">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="133" y="86" key="MergeDialog/0.24.1366.744@0.24.1366.744" timestamp="1594890251425" />
-    <state x="395" y="114" key="MultipleFileMergeDialog" timestamp="1594890254889">
+    <state x="133" y="86" width="1100" height="627" key="MergeDialog/0.24.1366.744@0.24.1366.744" timestamp="1594914581327" />
+    <state x="395" y="114" width="575" height="570" key="MultipleFileMergeDialog" timestamp="1594914585127">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state x="395" y="114" key="MultipleFileMergeDialog/0.24.1366.744@0.24.1366.744" timestamp="1594890254889" />
+    <state x="395" y="114" width="575" height="570" key="MultipleFileMergeDialog/0.24.1366.744@0.24.1366.744" timestamp="1594914585127" />
     <state x="180" y="33" key="SettingsEditor" timestamp="1594657581278">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="180" y="33" key="SettingsEditor/0.24.1366.744@0.24.1366.744" timestamp="1594657581278" />
+    <state x="279" y="132" width="808" height="530" key="Vcs.Push.Dialog.v2" timestamp="1594914549505">
+      <screen x="0" y="24" width="1366" height="744" />
+    </state>
+    <state x="279" y="132" width="808" height="530" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1594914549505" />
     <state x="480" y="177" key="chooseDestDirectoryDialog" timestamp="1594893978040">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
