@@ -15,7 +15,7 @@ public class Restaurants {
         this.restaurant = restaurant;
     }
 
-    public class Restaurant implements Serializable{
+    public static class Restaurant implements Serializable{
 
         private long id;
         private String name;
